@@ -1,0 +1,11 @@
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container">
+        <a routerLink = '/login' class="navbar-brand">SBook</a>
+        <button mat-icon-button [matMenuTriggerFor] = "menu">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button (click) = "onLogout()" mat-menu-item>Logout</button>
+        </mat-menu>
+    </div>
+</nav>
