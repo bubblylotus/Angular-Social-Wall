@@ -1,17 +1,18 @@
 <div class="container">
     <mat-card style="width: 500px; margin-bottom: 2em;" class="post-card">
     <div class="postForm">
-        <form [formGroup]='postForm'>
             <mat-form-field appearance="fill">
                 <mat-label>Say something...</mat-label>
-                <textarea matInput formControlName="postText" cols="30" rows="5"></textarea>
+                <textarea matInput cols="30" rows="5"></textarea>
             </mat-form-field>
             <mat-form-field>
-                <ngx-mat-file-input formControlName="imgFile" placeholder="upload image"></ngx-mat-file-input>
+                <ngx-mat-file-input 
+                placeholder="upload image" 
+                (change)="onFileSelected($event)"></ngx-mat-file-input>
                 <mat-icon matSuffix>folder</mat-icon>
             </mat-form-field>
-            <button mat-raised-button color = "primary">Post</button>
-        </form>
+            <button mat-raised-button color = "primary"
+            (click) = "post()">Post</button>
     </div>
     </mat-card>
 
