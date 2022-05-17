@@ -12,6 +12,7 @@ import { UserService } from 'src/app/services/user.service';
 })
 export class PostsComponent implements OnInit {
   postForm: FormGroup;
+  text = '';
   constructor(private userService: UserService, private router: Router, private storage: AngularFireStorage) { }
 
   ngOnInit(): void {
